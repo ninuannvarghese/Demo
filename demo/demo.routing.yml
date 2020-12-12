@@ -1,0 +1,7 @@
+demo.list:
+  path: '/listdesigns'
+  defaults:
+    _controller: 'Drupal\demo\Controller\Designs::listall'
+    _title: 'Design Listing'
+  requirements:
+    _permission: 'access content'

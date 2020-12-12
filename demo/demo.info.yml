@@ -1,0 +1,6 @@
+name: 'Demo Module'
+type: module
+description: 'Creates a content type named Design and calling an event subscriber on Add event'
+core: 8.x
+core_version_requirement: ^8 || ^9
+project: 'Demo'

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains demo.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\demo\Event\DesignNodeAddEvent;
+/**
+ * Implements hook_help().
+ */
+function demo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the demo module.
+    case 'help.page.demo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('For Test') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function demo_node_insert( EntityInterface $entity) {
+  \Drupal::service('event_dispatcher')->dispatch(DesignNodeAddEvent::DESIGN_NODE_INSERT, new DesignNodeAddEvent($entity));
+}

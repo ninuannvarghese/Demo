@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function demo_schema() {
+  $schema['design_list'] = [
+    'description' => 'Design List',
+    'fields' => [
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'designer_credits' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['nid'],
+  ];
+
+  return $schema;
+}

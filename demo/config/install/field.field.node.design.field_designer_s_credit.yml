@@ -1,0 +1,19 @@
+uuid: 6d51d631-29fc-4960-8cae-ae29d7e0ace9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_designer_s_credit
+    - node.type.design
+id: node.design.field_designer_s_credit
+field_name: field_designer_s_credit
+entity_type: node
+bundle: design
+label: 'Designer''s Credits'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

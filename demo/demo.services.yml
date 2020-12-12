@@ -1,0 +1,5 @@
+services:
+  demo.subscriber:
+    class: Drupal\demo\EventSubscriber\DesignNodeAddSubscriber
+    tags:
+      - { name: event_subscriber }
